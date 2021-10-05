@@ -1,8 +1,8 @@
 const { Client } = require("pg");
-const { DB_PASSWORD, DB_USERNAME } = require("../helpers/env");
+const { DB_PASSWORD, DB_USERNAME, DB_HOST } = require("../helpers/env");
 
 const connection = new Client({
-  host: "127.0.0.1",
+  host: DB_HOST,
   user: DB_USERNAME,
   password: DB_PASSWORD,
   database: "db_latihan",
